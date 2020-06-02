@@ -1,0 +1,204 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf340
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;\red0\green145\blue206;\red164\green8\blue0;\red133\green0\blue175;
+\red206\green59\blue0;\red0\green68\blue254;\red73\green0\blue0;\red102\green177\blue50;\red127\green127\blue127;
+\red26\green26\blue26;\red16\green60\blue192;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}}{\leveltext\leveltemplateid1\'01\'00;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+\margl1440\margr1440\vieww20220\viewh16440\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\fs72 \cf2 puzzlets
+\b \cf0  
+\fs36 \
+\
+INSTALL NOTES\
+
+\b0\fs28 REVISION: March 14th, 2016
+\b\fs36 \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\b0\fs24 \cf0       1.  Ensure that \'93
+\i Plugins
+\i0 \'94 and \'93
+\i PuzzletsSDK
+\i0 \'94 and \'93
+\i Scripts
+\i0 \'94 folders are in the \'93Assets\'94 root folder of your project. \
+\
+      2. Do 
+\b \cf3 NOT
+\b0 \cf0  put the \'93
+\i Plugins
+\i0 \'94 folder inside of \'93
+\i PuzzletsSDK
+\i0 \'94 or change the file structure to either (sub)directories. This will cause linking issues.\
+\
+      3. See \'93
+\i PuzzletSDK/PuzzletSDK/Example/Example.unity
+\i0 \'94 to test USB connection with Play Tray. This scene can also be deployed to Android/iOS devices to test Bluetooth. \
+          NOTE: Bluetooth can only be tested via tablet/phone; it cannot be tested on a desktop computer, even if the computer has Bluetooth built-in.\
+    \
+      4. Only Unity 5.x is supported.\
+\
+\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\b\fs48 \cf4 Unity Editor
+\b0\fs24 \cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\b \cf0 Api Compatibility Level ->
+\b0  .
+\i NET 2.0\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\i0 \cf0 \
+NOTE: if this is set to \'93
+\i .NET 2.0 Subset\'94
+\i0 , you will get \'93Ports\'94 errors and cannot Play/Build your project.\
+\
+\
+\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\b\fs48 \cf5 iOS\cf6 \
+
+\fs20 \cf7 LATEST VERSION TESTED \
+
+\b0 DATE: May 13th, 2016\
+iOS: 9.2\
+Unity: 5.3.4f1\
+Xcode: 7.3
+\b \
+\
+
+\b0\fs28 \cf5 Unity iOS Export Settings
+\fs24 \cf0 \
+1. 
+\b iOS
+\b0  
+\b Player Settings -> Other Settings ->
+\b0 \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\b \cf0   
+\b0     A) 
+\b Configuration
+\b0 \
+           Scripting Backend -> 
+\i IL2CPP
+\i0 \
+           Architecture -> 
+\i Universal\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\i0 \cf0 \
+     
+\b  
+\b0 B) 
+\b Optimization
+\b0  \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\b \cf0    
+\b0         Target iOS Version -> 
+\i 6.0
+\i0 \
+
+\b      
+\b0       Script Call Optimization -> (
+\i optional change to) Fast but No Exceptions 
+\i0 \
+\
+2. Select \'93Build & Run\'94 from the \'93Build Settings\'94 popup window.\
+\
+3. After exporting the first time, on subsequent exports, you can just select \'93
+\i Build & Run
+\i0 \'94 from the \'93
+\i File
+\i0 \'94 menu. However, if you go into \'93
+\i Build Settings\'94
+\i0  and \'93
+\i Build & Run
+\i0 \'94 from there, you will be prompted to \'93
+\i Replace\'94
+\i0  or \'93
+\i Append\'94
+\i0 . Always choose \'93
+\i Append
+\i0 \'94. If you do not choose \'93
+\i Append\'94
+\i0 , you will have to add the
+\i  \'93CoreBluetooth.framework\'94
+\i0  back into the Xcode project.\
+ \
+4. Unity will usually complain: \'93
+\i UnityException: Launching iOS project via Xcode4 failed.
+\i0 \'94 This can be ignored.\
+\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\fs28 \cf5 Xcode Build Settings
+\fs24 \cf0 \
+1. When opening up Xcode, you will have to manually go to the iOS folder created by Unity and click on the \'93
+\i Unity-iPhone.xcodeproj
+\i0 \'94 file. That is the main Xcode file.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\b \cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\b0 \cf0 2. 
+\b General -> Linked Frameworks and Libraries ->
+\b0  Add \'93
+\i CoreBluetooth.framework
+\i0 \'94 to the project\
+\
+If the Amplitude plugin is included in the project:\
+\
+3. 
+\b General -> Apply LLVM 7.1 - Language - Objective C -> Enable Objective-C Exceptions
+\b0  -> set to 
+\i Yes
+\i0 \
+\
+\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\b\fs48 \cf8 Android\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\fs20 \cf7 LATEST VERSION TESTED \
+
+\b0 DATE: March 14th, 2016\
+OS: 4.3 with Bluetooth 4.0\
+Unity: 4.7.1 \
+Java: SE 8u73 / 8u74\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\fs24 \cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\fs28 \cf9 Unity Android SDK Setup
+\fs24 \cf0 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls1\ilvl0\cf10 \expnd0\expndtw0\kerning0
+1. 
+\i Java Development Kit
+\i0  (JDK): \'a0{\field{\*\fldinst{HYPERLINK "http://www.oracle.com/technetwork/java/javase/downloads/index.html"}}{\fldrslt \cf11 \ul \ulc11 http://www.oracle.com/technetwork/java/javase/downloads/index.html}}\cf0 \
+\ls1\ilvl0\cf10 2. 
+\i Android SDK
+\i0  and 
+\i Stand-alone SDK Tools
+\i0 : {\field{\*\fldinst{HYPERLINK "http://developer.android.com/sdk/installing/index.html"}}{\fldrslt \cf11 \ul \ulc11 http://developer.android.com/sdk/installing/index.html}}\'a0\cf0 \kerning1\expnd0\expndtw0 \
+}
